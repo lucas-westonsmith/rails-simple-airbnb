@@ -1,0 +1,9 @@
+  <h2><%= @flat.name %></h2>
+  <h3><%= @flat.address %></h3>
+  <h3><%= @flat.description %></h3>
+  <h3><%= @flat.number_of_guests %></h3>
+  <h3><%= @flat.price_per_night %></h3>
+  <img src="<%= @flat.picture_url %>" alt="<%= @flat.name %>">
+  <%= link_to "Back to list", flats_path, class: "btn btn-secondary" %>
+  <%= link_to "Edit", edit_flat_path(@flat)%>
+  <%= link_to "Delete", flat_path(@flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
